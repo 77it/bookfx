@@ -324,7 +324,8 @@ Make.Sheet("New Sheet Name", protoBook, "Prototype Sheet Name");
     - `Sheet.Scale` - задать масштаб
     - `Sheet.ToBook` - создать `Book` с одним листом
 - `Box` - box любого вида
-    - `Box.Name` - задать имя области
+    - `Box.NameGlobally` - присвоить диапазону имя области книги
+    - `Box.NameLocally` - присвоить диапазону имя области листа
     - `Box.AutoSpan` - включить режим `AutoSpan` для строк и колонок
     - `Box.AutoSpanRows` - включить режим `AutoSpan` для строк
     - `Box.AutoSpanCols` - включить режим `AutoSpan` для колонок
@@ -372,7 +373,8 @@ Make.Sheet("New Sheet Name", protoBook, "Prototype Sheet Name");
     - `BoxStyle.Top` - выровнять по верхнему краю
     - `BoxStyle.Middle` - выровнять вертикально по середине
     - `BoxStyle.Bottom` - выровнять по нижнему краю
-    - `BoxStyle.Rotate` - повернуть текст
+    - `BoxStyle.RotateCounterclockwise` - повернуть текст против часовой стрелки
+    - `BoxStyle.RotateClockwise` - повернуть текст по часовой стрелке
     - `BoxStyle.Indent` - задать отступ
     - `BoxStyle.Format` - задать произвольный формат
     - `BoxStyle.DefaultFormat` - задать формат `General` (Общий)
@@ -400,7 +402,7 @@ Make.Sheet("New Sheet Name", protoBook, "Prototype Sheet Name");
 
 ``` txt
 BookFx. Composing Excel spreadsheets based on a tree of nested components like the HTML DOM.
-Copyright (c) 2019 Zhenya Gusev
+Copyright (c) 2019–2022 Zhenya Gusev
 ```
 
 ### Уведомление о лицензии
@@ -437,7 +439,7 @@ Copyright (c) 2019 Zhenya Gusev
 [immutable object]: https://en.wikipedia.org/wiki/Immutable_object
 [side effect]: https://en.wikipedia.org/wiki/Side_effect_(computer_science)
 [pure function]: https://en.wikipedia.org/wiki/Functional_programming#Pure_functions
-[.net standard 2.0]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md
+[.net standard 2.0]: https://github.com/dotnet/standard/blob/v2.1.0/docs/versions/netstandard2.0.md
 [epplus]: https://github.com/JanKallman/EPPlus
 [implicit convertions]: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/conversions#implicit-conversions
 [book-empty]: docs/img/book-empty.svg "Пустая книга"

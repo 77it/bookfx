@@ -326,7 +326,8 @@ See also the example [S5ProtoSheet.cs][s5protosheet.cs].
     - `Sheet.Scale` - define a scale
     - `Sheet.ToBook` - make a `Book` with one sheet
 - `Box` - a box of any type
-    - `Box.Name` - define a name of the range
+    - `Box.NameGlobally` - define a book scoped name of the range
+    - `Box.NameLocally` - define a sheet scoped name of the range
     - `Box.AutoSpan` - activate `AutoSpan` mode for rows and columns
     - `Box.AutoSpanRows` - activate `AutoSpan` mode for rows
     - `Box.AutoSpanCols` - activate `AutoSpan` mode for columns
@@ -374,7 +375,8 @@ See also the example [S5ProtoSheet.cs][s5protosheet.cs].
     - `BoxStyle.Top` - align to the top
     - `BoxStyle.Middle` - align at the middle vertically
     - `BoxStyle.Bottom` - align to the bottom
-    - `BoxStyle.Rotate` - rotate the text
+    - `BoxStyle.RotateCounterclockwise` - rotate the text counterclockwise
+    - `BoxStyle.RotateClockwise` - rotate the text clockwise
     - `BoxStyle.Indent` - define an indent
     - `BoxStyle.Format` - define a custom format
     - `BoxStyle.DefaultFormat` - define the `General` format
@@ -402,7 +404,7 @@ The project is licensed under the [LGPL-3.0-or-later](https://spdx.org/licenses/
 
 ``` txt
 BookFx. Composing Excel spreadsheets based on a tree of nested components like the HTML DOM.
-Copyright (c) 2019 Zhenya Gusev
+Copyright (c) 2019–2022 Zhenya Gusev
 ```
 
 ### The license notice
@@ -437,7 +439,7 @@ along with this library. If not, see <https://www.gnu.org/licenses/>.
 [immutable object]: https://en.wikipedia.org/wiki/Immutable_object
 [side effect]: https://en.wikipedia.org/wiki/Side_effect_(computer_science)
 [pure function]: https://en.wikipedia.org/wiki/Functional_programming#Pure_functions
-[.net standard 2.0]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md
+[.net standard 2.0]: https://github.com/dotnet/standard/blob/v2.1.0/docs/versions/netstandard2.0.md
 [epplus]: https://github.com/JanKallman/EPPlus
 [implicit convertions]: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/conversions#implicit-conversions
 [book-empty]: docs/img/book-empty.svg "Empty workbook"

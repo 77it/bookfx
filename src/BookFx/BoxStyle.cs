@@ -1,12 +1,13 @@
 ﻿namespace BookFx
 {
+    using System;
     using System.Collections.Generic;
     using System.Drawing;
     using System.Linq;
     using BookFx.Cores;
     using BookFx.Functional;
     using JetBrains.Annotations;
-    using static Functional.F;
+    using static BookFx.Functional.F;
     using static Make;
 
     /// <summary>
@@ -260,7 +261,22 @@
         /// <summary>
         /// Rotate the text counterclockwise.
         /// </summary>
+        /// <param name="degrees">An angle of rotation in degrees from 0 to 90.</param>
+        [Pure]
+        public BoxStyle RotateCounterclockwise(int degrees) => Get.With(rotation: degrees);
+
+        /// <summary>
+        /// Rotate the text clockwise.
+        /// </summary>
+        /// <param name="degrees">An angle of rotation in degrees from 1 to 90.</param>
+        [Pure]
+        public BoxStyle RotateClockwise(int degrees) => Get.With(rotation: 90 + degrees);
+
+        /// <summary>
+        /// Rotate the text counterclockwise.
+        /// </summary>
         /// <param name="degrees">An angle of rotation in degrees from 0 to 180.</param>
+        [Obsolete("Use RotateCounterclockwise or RotateClockwise instead.")]
         [Pure]
         public BoxStyle Rotate(int degrees) => Get.With(rotation: degrees);
 
